@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WP8 Icons Legend</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="msapplication-tap-highlight" content="no"/>
+</head>
+<body>
+    <header>
+        <h1>WP8 Icons</h1>
+    </header>
+
+    <ul id="icons" data-bind="foreach: icons">
+        <li data-bind="click: $root.goToPage">
+            <span class="icon" data-bind="css: $data"></span>
+        </li>
+    </ul>
+
+    <p id="active-explanation" data-bind="animatedDiv: chosenPage" ></p>
+
+
+
+    <script type="text/template" id="signal">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-signal-full.png" alt="Very high signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Very high signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-signal-high.png" alt="High signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    High signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-signal-medium.png" alt="Medium signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Medium signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-signal-low.png" alt="Low signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Low signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-signal-very-low.png" alt="Very low signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Very low signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-no-signal.png" alt="No signal detected icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Extremely low signal strength
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-no-data.png" alt="No signal icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    No signal because your phone isn't connected to a cellular
+                    network.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-airplane-mode.png" alt="Airplane mode icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Your phone is in <span class="italic" data-xmtag="hhtNewTerm">Airplane mode</span>.
+                    Cellular, Wi-Fi, FM radio, and Bluetooth connections are all turned off
+                    simultaneously when you turn on Airplane mode. (However, you can still turn
+                    Wi-Fi, FM radio, and Bluetooth on separately.) See
+                    <a href="../start/whats-airplane-mode" data-xmtag="hhtTopicLink">What's Airplane
+                        mode?</a> for more information.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-sim-missing.png" alt="SIM card missing icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    SIM card is missing.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-sim-locked.png" alt="SIM card locked icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    SIM card is locked. For more information, see
+                    <a href="../basics/use-a-pin-to-lock-my-sim-card" data-xmtag="hhtTopicLink">Use a PIN
+                        to lock my SIM card</a>.
+                </p>
+            </td></tr>
+            </tbody></table>
+
+    </script>
+
+    <script type="text/template" id="cell">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-gprs.png" alt="GPRS icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    GPRS
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-edge.png" alt="EDGE icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    EDGE
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-umts.png" alt="3G icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    3G
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-4g.png" alt="4G icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    4G
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-hsdpa.png" alt="HSDA/HSUPA icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    HSDPA/HSUPA
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-1xrt.png" alt="RTT icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    RTT
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-1xevdo.png" alt="EVDO icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    EVDO
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-evdv.png" alt="EVDV icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    EVDV
+                </p>
+            </td></tr>
+            </tbody></table>
+    </script>
+
+    <script type="text/template" id="forward">
+        <p data-xmtag="hhtPara">
+            The <span class="emphasis" data-xmtag="hhtUI">Call forwarding </span> (
+            <img class="inlineImage" src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-call-forward.png" alt="Call forwarding icon">) icon appears when call forwarding is turned
+            on. To learn how to forward calls, see
+            <a href="../start/make-and-receive-phone-calls" data-xmtag="hhtTopicLink">Make and
+                receive phone calls</a>.
+        </p>
+    </script>
+
+    <script type="text/template" id="roaming">
+        <p data-xmtag="hhtPara">
+            The <span class="emphasis" data-xmtag="hhtUI">Roaming </span> (
+            <img class="inlineImage" src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-roaming.png" alt="Roaming icon">) icon lets you know that your phone is roaming and not
+            using your home cellular network. For more information, see
+            <a href="../start/whats-data-roaming" data-xmtag="hhtTopicLink">What's data
+                roaming?</a></p>
+    </script>
+
+    <script type="text/template" id="wifi">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-wifi-connected-full.png" alt="Very high Wi-Fi icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Connected to a Wi-Fi network. The icon is animated when your
+                    phone is trying to connect to a Wi-Fi network. For info about setting up a
+                    Wi-Fi connection, see
+                    <a href="../start/connect-to-a-wi-fi-network" data-xmtag="hhtTopicLink">Connect to a
+                        Wi-Fi network</a>.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-wifi-not-connected.png" alt="Wi-Fi not connected icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Wi-Fi is turned on, but your phone isn't connected to a Wi-Fi
+                    network.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-internet-sharing.png" alt="Internet sharing icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Cellular data connection is shared with other devices over
+                    Wi-Fi. For more info, see
+                    <a href="../start/share-my-connection" data-xmtag="hhtTopicLink">Share my
+                        connection</a>.
+                </p>
+            </td></tr>
+            </tbody></table>
+    </script>
+
+    <script type="text/template" id="bluetooth">
+        <p data-xmtag="hhtPara">
+            The <span class="emphasis" data-xmtag="hhtUI">Bluetooth </span> (
+            <img class="inlineImage" src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-bluetooth.png" alt="Bluetooth icon">) icon indicates that a Bluetooth device is connected
+            to your phone. To learn more, see
+            <a href="../start/pair-phone-with-a-bluetooth-accessory" data-xmtag="hhtTopicLink">Pair my phone
+                with a Bluetooth accessory</a>.
+        </p>
+    </script>
+
+    <script type="text/template" id="profile">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-vibrate.png" alt="Vibrate mode icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    The phone is in Vibrate mode.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-silent-mode.png" alt="Silent icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    The phone is in Silent mode.
+                </p>
+            </td></tr>
+            </tbody></table>
+    </script>
+
+    <script type="text/template" id="location">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-shift-on.png" alt="Shift on icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Shift is on.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-shift-lock-on.png" alt="Shift lock icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Shift Lock is on.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-fn-on.png" alt="Fn on icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Fn is on.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-fn-lock-on.png" alt="Fn lock icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Fn Lock is on.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-language-en.png" alt="English language icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    English (United States) (ENU) is the current keyboard
+                    language. The letters that appear depend on the current keyboard language. To
+                    learn more, see
+                    <a href="../basics/change-keyboard-language" data-xmtag="hhtTopicLink">Change my
+                        keyboard language</a>.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-location.png" alt="Location icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    An app is accessing your phone's current location
+                    information. For more info about location awareness and services, see
+                    <a href="../web/location-awareness-and-my-phone" data-xmtag="hhtTopicLink">Location
+                        awareness and my phone</a>.
+                </p>
+            </td></tr>
+            </tbody></table>
+    </script>
+
+    <script type="text/template" id="battery">
+        <table data-xmtag="hhtIconGlossary">
+            <tbody><tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-charging.png" alt="Battery charging icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Battery is charging.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-plugged-in-full.png" alt="Plugged in fully charged icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Phone is plugged in and battery is fully charged.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-full.png" alt="Full battery icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Full battery power
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-high.png" alt="High battery icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    High battery power
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-medium.png" alt="Medium battery icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Medium battery power
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-low.png" alt="Low battery icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Low battery power
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-critically-low.png" alt="Critically low battery icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Critically low battery power and needs to be charged.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-unknown-state.png" alt="Unknown battery state"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Battery power or state of the battery isn't known at the
+                    current time.
+                </p>
+            </td></tr>
+            <tr data-xmtag="hhtIconEntry"><td data-xmtag="hhtImage"><div class="image" data-xmtag="hhtImage"><img src="http://cmsresources.windowsphone.com/windowsphone/en-us/How-to/wp7/inline/system-icon-battery-saver.png" alt="Battery Saver icon"></div></td><td data-xmtag="hhtDefinition">
+                <p data-xmtag="hhtPara">
+                    Battery Saver is on.
+                </p>
+            </td></tr>
+            </tbody></table>
+    </script>
+
+    <script type="text/template" id="clock">
+        <p data-xmtag="hhtPara">
+            The clock displays the current time.
+        </p>
+    </script>
+
+    <script src="lib/knockout-2.2.0.js"></script>
+    <script src="lib/move.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
