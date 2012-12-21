@@ -6,6 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
+Math.floor()
+
 var ViewModel = function() {
     var self = this;
 
